@@ -1,10 +1,10 @@
 # Zara Compiler
 
-A complete compiler implementation for the Zara programming language, written in Rust.
+A compiler implementation for the Zara programming language, written in Rust.
 
 ## Features
 
-This compiler covers all phases of compilation:
+We wrote it in phases as follows:
 
 1. **Week 1: Symbol Table** - Manages variable declarations with types (integer, float, string, array, stack)
 2. **Week 2: Lexical Analysis** - Tokenizes source code using pattern matching
@@ -167,4 +167,4 @@ compiler/
 
 ## License
 
-This project is for educational purposes as part of a Compiler Construction course.
+This project is part of my compiler construction unit course work and shouldn't be used in production as it may contain bugs
