@@ -1,0 +1,139 @@
+// Example Zara program demonstrating all language features
+// Week 1: Symbol Table - Various data types
+
+// Integer variables
+let count: integer = 0;
+let max: integer = 100;
+
+// Float variables  
+let pi: float = 3.14159;
+let temperature: float = 98.6;
+
+// String variables
+let greeting: string = "Hello, Zara!";
+let name: string = "Compiler";
+
+// Boolean variables
+let isRunning: boolean = true;
+let isComplete: boolean = false;
+
+// Array declaration
+let numbers: array[10] of integer = new array[10] of integer;
+let names: array of string = new array[5] of string;
+
+// Stack declaration
+let operands: stack of integer = new stack of integer;
+
+// Week 2: Lexical Analysis - Keywords, operators, identifiers, literals
+// All tokens above demonstrate lexical analysis
+
+// Week 3 & 4: Syntax Analysis - Control structures
+
+// If-else statement
+if (count < max) {
+    count = count + 1;
+} else {
+    count = 0;
+}
+
+// Nested if-else
+if (temperature > 100.0) {
+    print("Hot!");
+} else if (temperature > 70.0) {
+    print("Warm");
+} else {
+    print("Cold");
+}
+
+// While loop
+while (count < 10) {
+    numbers[count] = count * 2;
+    count = count + 1;
+}
+
+// Do-while loop
+let i: integer = 0;
+do {
+    i = i + 1;
+} while (i < 5);
+
+// For loop
+for (let j: integer = 0; j < 10; j = j + 1) {
+    print(j);
+}
+
+// Week 3 & 4: Sub-programs (functions)
+func add(a: integer, b: integer) -> integer {
+    return a + b;
+}
+
+func multiply(x: float, y: float) -> float {
+    return x * y;
+}
+
+func greet(personName: string) -> void {
+    print("Hello, ");
+    print(personName);
+}
+
+func factorial(n: integer) -> integer {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// Week 5: Semantic Analysis - Type checking examples
+let result: integer = add(5, 3);
+let product: float = multiply(2.5, 4.0);
+let fact: integer = factorial(5);
+
+// Week 9: Object-Oriented Code
+class Point {
+    x: integer;
+    y: integer;
+    
+    constructor(initX: integer, initY: integer) {
+        this.x = initX;
+        this.y = initY;
+    }
+    
+    func move(dx: integer, dy: integer) -> void {
+        this.x = this.x + dx;
+        this.y = this.y + dy;
+    }
+    
+    func distance() -> float {
+        return this.x * this.x + this.y * this.y;
+    }
+}
+
+class ColoredPoint extends Point {
+    color: string;
+    
+    func setColor(c: string) -> void {
+        this.color = c;
+    }
+}
+
+// Object creation
+let origin: Point = new Point(0, 0);
+let myPoint: Point = new Point(10, 20);
+myPoint.move(5, -3);
+
+let colorPoint: ColoredPoint = new ColoredPoint(1, 1);
+colorPoint.setColor("red");
+
+// Expression examples
+let expr1: integer = 1 + 2 * 3;
+let expr2: integer = (1 + 2) * 3;
+let expr3: boolean = count > 0 && isRunning;
+let expr4: boolean = !isComplete || count == max;
+
+// Input/Output
+print("Enter a number:");
+input(count);
+print(count);
+
+// Final output
+print("Compilation complete!");

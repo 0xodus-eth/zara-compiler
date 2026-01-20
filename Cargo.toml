@@ -1,0 +1,11 @@
+[package]
+name = "zara-compiler"
+version = "0.1.0"
+edition = "2021"
+description = "A compiler for the Zara programming language"
+
+[dependencies]
+
+[[bin]]
+name = "zara"
+path = "src/main.rs"
